@@ -1,34 +1,56 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contact — CloudSpark</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"></head>
-<body>
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact — CloudSpark</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-dark">
+  <div id="transition"></div><div id="progress"></div>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.png" class="site-logo" alt="logo"><div class="brand-text"><h1>CloudSpark</h1><p class="muted">Cloud · AI · Apps</p></div></a>
-      <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="main-nav" id="mainNav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
+      <a class="brand" href="index.html" data-link><img src="assets/logo.png" class="site-logo"><div class="brand-text"><h1>CloudSpark</h1><p>Cloud • AI • Apps</p></div></a>
+      <button id="navToggle" class="nav-toggle" aria-label="Open Menu">☰</button>
+      <nav id="mainNav" class="main-nav underline-nav">
+        <a href="index.html" data-link>Home</a>
+        <a href="about.html" data-link>About</a>
+        <a href="services.html" data-link>Services</a>
+        <a class="active" href="contact.html" data-link>Contact</a>
+        <span class="u-bar"></span>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h2>Contact</h2>
-    <p class="muted">Email: <a class="link" href="mailto:kompellisrianjaneyam@gmail.com">kompellisrianeyam@gmail.com</a></p>
-    <p class="muted">Phone: <a class="link" href="tel:+916303450609">+91 6303450609</a></p>
-
-    <form action="mailto:kompellisrianeyam@gmail.com" method="post" enctype="text/plain" class="contact-form reveal">
-      <label>Name <input type="text" name="name" required></label>
-      <label>Email <input type="email" name="email" required></label>
-      <label>Message <textarea name="message" rows="6" required></textarea></label>
-      <button class="btn primary" type="submit">Send message</button>
-    </form>
+  <main class="container section">
+    <h2 data-reveal>Contact</h2>
+    <div class="panel grid-2 gap" data-reveal>
+      <div>
+        <h4>Email</h4>
+        <p><a class="link" href="mailto:kompellisrianjaneyam@gmail.com">kompellisrianjaneyam@gmail.com</a></p>
+        <h4>Phone</h4>
+        <p><a class="link" href="tel:+916303450609">+91 6303450609</a></p>
+        <h4>Founder</h4>
+        <p><strong>K Sri Anjaneyam</strong></p>
+      </div>
+      <div>
+        <h4>Quick Note</h4>
+        <p class="muted">Use your email app:</p>
+        <div class="mini-cta">
+          <a class="btn primary magnetic" href="mailto:kompellisrianjaneyam@gmail.com?subject=CloudSpark%20Project%20Inquiry&body=Hi%20CloudSpark%2C%0A%0AMy%20project%20is%20about%20...">Email Us</a>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner"><div>© CloudSpark Technologies</div><div class="muted"><a class="link" href="index.html">Home</a></div></div>
+    <div class="container footer-inner">© CloudSpark Technologies • Founder: <strong>K Sri Anjaneyam</strong></div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

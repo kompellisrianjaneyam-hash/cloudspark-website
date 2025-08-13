@@ -1,32 +1,58 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Services — CloudSpark</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"></head>
-<body>
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Services — CloudSpark</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-dark">
+  <div id="transition"></div><div id="progress"></div>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.png" class="site-logo" alt="logo"><div class="brand-text"><h1>CloudSpark</h1><p class="muted">Cloud · AI · Apps</p></div></a>
-      <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="main-nav" id="mainNav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
+      <a class="brand" href="index.html" data-link><img src="assets/logo.png" class="site-logo"><div class="brand-text"><h1>CloudSpark</h1><p>Cloud • AI • Apps</p></div></a>
+      <button id="navToggle" class="nav-toggle" aria-label="Open Menu">☰</button>
+      <nav id="mainNav" class="main-nav underline-nav">
+        <a href="index.html" data-link>Home</a>
+        <a href="about.html" data-link>About</a>
+        <a class="active" href="services.html" data-link>Services</a>
+        <a href="contact.html" data-link>Contact</a>
+        <span class="u-bar"></span>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h2>Services</h2>
-    <div class="cards reveal">
-      <article class="card"><h4>Custom AI Agents</h4><p class="muted">Conversational assistants, retrieval agents and process automation.</p></article>
-      <article class="card"><h4>Web & SaaS</h4><p class="muted">Full-stack web apps, dashboards, and multi-tenant SaaS foundations.</p></article>
-      <article class="card"><h4>Mobile Apps</h4><p class="muted">Android/iOS apps, Play Store support and releases.</p></article>
-      <article class="card"><h4>Games & Prototypes</h4><p class="muted">Fast game prototypes and interactive demos to test ideas.</p></article>
-      <article class="card"><h4>Blockchain</h4><p class="muted">Token creation support and simple smart contracts.</p></article>
+  <main class="container section">
+    <h2 data-reveal>What we ship</h2>
+    <div class="cards big">
+      <article class="card lift tilt" data-reveal><h4>AI Support Agent</h4><p>Docs + chat + routing; cut response time with RAG.</p></article>
+      <article class="card lift tilt" data-reveal data-delay="0.06"><h4>SaaS Dashboard</h4><p>Auth, metrics, alerts, export; cloud-native.</p></article>
+      <article class="card lift tilt" data-reveal data-delay="0.12"><h4>Mobile Companion</h4><p>Android/iOS app to complement your web product.</p></article>
+      <article class="card lift tilt" data-reveal data-delay="0.18"><h4>Automation Glue</h4><p>Connect tools, ship workflows, reduce manual steps.</p></article>
+    </div>
+
+    <h3 class="section-title" data-reveal>MVP Packages</h3>
+    <div class="pricing">
+      <div class="price-card"><h4>Starter</h4><p class="muted">Best for demos</p><ul><li>Core features</li><li>Simple UI</li><li>1 week</li></ul></div>
+      <div class="price-card featured"><h4>Growth</h4><p class="muted">Best for pilots</p><ul><li>Advanced features</li><li>Auth + dashboard</li><li>2–3 weeks</li></ul></div>
+      <div class="price-card"><h4>Custom</h4><p class="muted">Your scope</p><ul><li>Flexible stack</li><li>Integrations</li><li>Timeline agreed</li></ul></div>
+    </div>
+
+    <h3 class="section-title" data-reveal>Tech</h3>
+    <div class="marquee small">
+      <div class="marquee-inner"><span>TypeScript</span><span>Next.js</span><span>Node</span><span>Python</span><span>Postgres</span><span>Supabase</span><span>Vercel</span><span>AWS</span></div>
+      <div class="marquee-inner clone"><span>TypeScript</span><span>Next.js</span><span>Node</span><span>Python</span><span>Postgres</span><span>Supabase</span><span>Vercel</span><span>AWS</span></div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner"><div>© CloudSpark Technologies</div><div class="muted"><a class="link" href="index.html">Home</a></div></div>
+    <div class="container footer-inner">© CloudSpark Technologies • Founder: <strong>K Sri Anjaneyam</strong></div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
