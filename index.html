@@ -3,162 +3,141 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>CloudSpark Technologies — Cloud • AI • Apps</title>
-  <meta name="description" content="CloudSpark Technologies builds AI agents, cloud apps, and modern web experiences. Founded by K Sri Anjaneyam."/>
+  <title>CloudSpark Technologies — AI, Cloud & Automation</title>
+  <meta name="description" content="CloudSpark Technologies builds AI agents, cloud platforms, automations, and modern apps. Founded by K Sri Anjaneyam.">
+  <link rel="icon" href="assets/logo.png"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body class="theme-dark">
-  <!-- page transition overlay -->
-  <div id="transition"></div>
-  <!-- top progress bar -->
-  <div id="progress"></div>
+<body>
+  <!-- Page transition -->
+  <div class="page-transition" id="pageTransition"></div>
 
-  <header class="site-header" data-reveal>
-    <div class="container header-inner">
-      <a class="brand" href="index.html" data-link>
-        <img src="assets/logo.png" alt="CloudSpark logo" class="site-logo parallax" data-parallax="2">
-        <div class="brand-text">
-          <h1>CloudSpark Technologies</h1>
-          <p>Cloud • AI • Apps</p>
-        </div>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="CloudSpark logo" class="brand__logo">
+        <span class="brand__name">CloudSpark Technologies</span>
       </a>
-      <button id="navToggle" class="nav-toggle" aria-label="Open Menu">☰</button>
-      <nav id="mainNav" class="main-nav underline-nav">
-        <a href="index.html" class="active" data-link>Home</a>
-        <a href="about.html" data-link>About</a>
-        <a href="services.html" data-link>Services</a>
-        <a href="contact.html" data-link>Contact</a>
-        <span class="u-bar"></span>
+      <nav class="nav__links">
+        <a href="#services">Services</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Solutions</a>
+        <a href="contact.html" class="btn btn--outline">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy" data-reveal>
-        <div class="eyebrow">Built by a young founder — <strong>K Sri Anjaneyam</strong></div>
-        <h2 class="hero-title">
-          We ship <span class="typed"></span>
-          that customers actually use.
-        </h2>
-        <p class="lead">From AI agents to cloud-native dashboards and mobile apps, we turn ideas into polished products fast.</p>
-        <div class="cta">
-          <a class="btn primary magnetic" href="services.html" data-link>Explore Services</a>
-          <a class="btn ghost magnetic" href="about.html" data-link>Meet the Founder</a>
-        </div>
-        <div class="stats">
-          <div class="stat"><span class="count" data-count="12">0</span><small>prototypes</small></div>
-          <div class="stat"><span class="count" data-count="4">0</span><small>active pilots</small></div>
-          <div class="stat"><span class="count" data-count="100">0</span><small>% focus</small></div>
-        </div>
+  <!-- HERO (no pin, no big gaps) -->
+  <section class="hero" id="home">
+    <canvas id="bg3d" aria-hidden="true"></canvas>
+    <div class="hero__overlay container">
+      <div class="badge">
+        <span>AI • Cloud • Automation</span>
       </div>
-
-      <div class="hero-visual parallax-wrap" data-reveal>
-        <div class="glow g1"></div>
-        <div class="glow g2"></div>
-        <lottie-player
-          src="https://assets8.lottiefiles.com/packages/lf20_YTZ6fY.json"
-          background="transparent" speed="1" loop autoplay
-          class="tilt parallax" data-parallax="4">
-        </lottie-player>
-        <canvas id="particles"></canvas>
+      <h1 class="hero__title"><span class="accent">CloudSpark</span> builds intelligent systems.</h1>
+      <p class="hero__subtitle">Production AI agents, scalable cloud, resilient automations & sleek apps.</p>
+      <div class="hero__cta">
+        <a href="#services" class="btn btn--primary">Explore Services</a>
+        <a href="contact.html" class="btn btn--ghost">Start a Project</a>
       </div>
     </div>
-    <svg class="rings parallax" data-parallax="-3" viewBox="0 0 600 600" aria-hidden="true">
-      <circle cx="300" cy="300" r="120"></circle>
-      <circle cx="300" cy="300" r="200"></circle>
-      <circle cx="300" cy="300" r="280"></circle>
-    </svg>
+    <div class="hero__fade"></div>
   </section>
 
-  <!-- MARQUEE -->
-  <section class="marquee" aria-label="tech stack">
-    <div class="marquee-inner">
-      <span>OpenAI</span><span>Claude</span><span>Vector DB</span><span>Next.js</span><span>Postgres</span><span>Supabase</span><span>Stripe</span><span>Vercel</span>
-    </div>
-    <div class="marquee-inner clone">
-      <span>OpenAI</span><span>Claude</span><span>Vector DB</span><span>Next.js</span><span>Postgres</span><span>Supabase</span><span>Stripe</span><span>Vercel</span>
-    </div>
-  </section>
-
-  <!-- CAPABILITIES -->
-  <section class="container section" id="capabilities">
-    <h3 class="section-title" data-reveal>Capabilities</h3>
-    <div class="cards">
-      <article class="card lift tilt" data-reveal><h4>AI Agents</h4><p>RAG chat, support assistants, and workflow automation.</p></article>
-      <article class="card lift tilt" data-reveal data-delay="0.06"><h4>Cloud & SaaS</h4><p>Secure APIs, dashboards, multi-tenant apps, analytics.</p></article>
-      <article class="card lift tilt" data-reveal data-delay="0.12"><h4>Mobile & Games</h4><p>Android/iOS prototypes, Unity builds, store prep.</p></article>
-      <article class="card lift tilt" data-reveal data-delay="0.18"><h4>Data & BI</h4><p>ETL, metrics layers, insight surfaces for decisions.</p></article>
-    </div>
-  </section>
-
-  <!-- CASE STUDIES -->
-  <section class="container section alt" id="cases">
-    <h3 class="section-title" data-reveal>Recent Work</h3>
-    <div class="case-grid">
-      <article class="case reveal-clip">
-        <div class="case-img gradient-frame"></div>
-        <div class="case-copy">
-          <h4>Support Agent</h4>
-          <p class="muted">Deflects tickets with docs + chat retrieval; analytics dashboard.</p>
-        </div>
-      </article>
-      <article class="case reveal-clip">
-        <div class="case-img gradient-frame"></div>
-        <div class="case-copy">
-          <h4>Usage Dashboard</h4>
-          <p class="muted">Auth, billing, metrics, alerts — shipped in 14 days.</p>
-        </div>
-      </article>
-      <article class="case reveal-clip">
-        <div class="case-img gradient-frame"></div>
-        <div class="case-copy">
-          <h4>Mobile Companion</h4>
-          <p class="muted">iOS/Android companion for on-the-go workflows.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="container section" id="process">
-    <h3 class="section-title" data-reveal>Process</h3>
-    <div class="timeline">
-      <div class="t-item"><span>01</span><h5>Discover</h5><p>Scope, constraints, metrics.</p></div>
-      <div class="t-item"><span>02</span><h5>Prototype</h5><p>Clickable flows and data mocks.</p></div>
-      <div class="t-item"><span>03</span><h5>Build</h5><p>API, UI, AI integrations.</p></div>
-      <div class="t-item"><span>04</span><h5>Ship</h5><p>Deploy, measure, iterate.</p></div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="container section cta-panel" id="cta">
-    <div class="panel">
-      <h3>Have an idea? Let’s build the MVP.</h3>
-      <p class="muted">1–2 week sprints. Clear scope. Real outcomes.</p>
-      <a class="btn primary magnetic" href="contact.html" data-link>Get a Proposal</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© CloudSpark Technologies • Founder: <strong>K Sri Anjaneyam</strong></div>
-      <div class="muted">
-        <a class="link" href="mailto:kompellisrianjaneyam@gmail.com">kompellisrianjaneyam@gmail.com</a> •
-        <a class="link" href="tel:+916303450609">+91 6303450609</a>
+  <!-- Services -->
+  <section id="services" class="section container">
+    <h2 class="section__title reveal">What we do</h2>
+    <p class="section__subtitle reveal">Fast to MVP, safe to scale.</p>
+    <div class="grid">
+      <div class="card reveal">
+        <h3>AI Agents & Chatbots</h3>
+        <p>Support, sales, internal ops. Tools, memory, guardrails, analytics.</p>
       </div>
+      <div class="card reveal">
+        <h3>Cloud & DevOps</h3>
+        <p>Infra-as-code, CI/CD, observability, cost control on AWS/GCP/Azure.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Automation</h3>
+        <p>Connect apps, orchestrate workflows, remove busywork.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Apps & Dashboards</h3>
+        <p>Web & mobile with auth, realtime data and crisp UX.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof/Why -->
+  <section class="section container split">
+    <div class="split__text reveal">
+      <h2>Why CloudSpark</h2>
+      <ul class="ticks">
+        <li>Founder-led — fast decisions, strong standards.</li>
+        <li>Architecture first — maintainable and observable.</li>
+        <li>Security minded — secrets, least privilege, reviews.</li>
+        <li>Business impact over hype — measurable value.</li>
+      </ul>
+      <div class="cta-row">
+        <a href="services.html" class="btn btn--primary">See solutions</a>
+        <a href="about.html" class="btn btn--ghost">Meet the team</a>
+      </div>
+    </div>
+    <div class="split__card reveal">
+      <div class="glow"></div>
+      <h3>Delivery Model</h3>
+      <p>Scoped sprints, weekly demos, transparent tracking, and post-launch support.</p>
+      <div class="mini-stats">
+        <div><strong>10x</strong><span>Faster MVPs</span></div>
+        <div><strong>99.9%</strong><span>Uptime targets</span></div>
+        <div><strong>60%</strong><span>Ops time saved</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder -->
+  <section class="section container founder">
+    <div class="founder__card reveal">
+      <img src="assets/founder.jpg" alt="Founder — K Sri Anjaneyam" class="founder__img"/>
+      <div class="founder__info">
+        <h3>K Sri Anjaneyam</h3>
+        <p class="muted">Founder & CEO — CloudSpark Technologies</p>
+        <p>Young founder building useful AI and resilient cloud for real businesses.</p>
+        <div class="founder__cta">
+          <a href="mailto:kompellisrianjaneyam@gmail.com" class="btn btn--primary">Email</a>
+          <a href="tel:+916303450609" class="btn btn--ghost">Call: +91 6303450609</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="brand brand--footer">
+          <img src="assets/logo.png" class="brand__logo" alt="">
+          <span class="brand__name">CloudSpark Technologies</span>
+        </div>
+        <p class="muted">© <span id="year"></span> CloudSpark Technologies. All rights reserved.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Solutions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </footer>
 
-  <!-- libs -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- Libraries -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <!-- Your JS -->
   <script src="js/main.js"></script>
 </body>
 </html>
