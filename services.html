@@ -1,58 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Services — CloudSpark</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services — CloudSpark Technologies</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="theme-dark">
-  <div id="transition"></div><div id="progress"></div>
-
+<body>
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" data-link><img src="assets/logo.png" class="site-logo"><div class="brand-text"><h1>CloudSpark</h1><p>Cloud • AI • Apps</p></div></a>
-      <button id="navToggle" class="nav-toggle" aria-label="Open Menu">☰</button>
-      <nav id="mainNav" class="main-nav underline-nav">
-        <a href="index.html" data-link>Home</a>
-        <a href="about.html" data-link>About</a>
-        <a class="active" href="services.html" data-link>Services</a>
-        <a href="contact.html" data-link>Contact</a>
-        <span class="u-bar"></span>
-      </nav>
-    </div>
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="CloudSpark logo" class="brand-logo" />
+      <span class="brand-name">CloudSpark Technologies</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main class="container section">
-    <h2 data-reveal>What we ship</h2>
-    <div class="cards big">
-      <article class="card lift tilt" data-reveal><h4>AI Support Agent</h4><p>Docs + chat + routing; cut response time with RAG.</p></article>
-      <article class="card lift tilt" data-reveal data-delay="0.06"><h4>SaaS Dashboard</h4><p>Auth, metrics, alerts, export; cloud-native.</p></article>
-      <article class="card lift tilt" data-reveal data-delay="0.12"><h4>Mobile Companion</h4><p>Android/iOS app to complement your web product.</p></article>
-      <article class="card lift tilt" data-reveal data-delay="0.18"><h4>Automation Glue</h4><p>Connect tools, ship workflows, reduce manual steps.</p></article>
-    </div>
+  <section class="page-hero">
+    <h1>Services</h1>
+    <p>AI, Cloud, DevOps — plus high-quality Websites, Apps, Games & Tokens.</p>
+  </section>
 
-    <h3 class="section-title" data-reveal>MVP Packages</h3>
-    <div class="pricing">
-      <div class="price-card"><h4>Starter</h4><p class="muted">Best for demos</p><ul><li>Core features</li><li>Simple UI</li><li>1 week</li></ul></div>
-      <div class="price-card featured"><h4>Growth</h4><p class="muted">Best for pilots</p><ul><li>Advanced features</li><li>Auth + dashboard</li><li>2–3 weeks</li></ul></div>
-      <div class="price-card"><h4>Custom</h4><p class="muted">Your scope</p><ul><li>Flexible stack</li><li>Integrations</li><li>Timeline agreed</li></ul></div>
-    </div>
+  <main class="section">
+    <article id="ai" class="service-block reveal">
+      <h2>AI Assistants & Automation</h2>
+      <p>
+        Voice/chat tutors, customer support bots, research copilots and task automations using top models (OpenAI, Anthropic, Google, open-source) with accuracy via RAG and guardrails.
+      </p>
+      <ul class="bullet">
+        <li>Voice tutor (phone-style) for schools/training</li>
+        <li>WhatsApp/Telegram support bots</li>
+        <li>Knowledge-base Q&A over your docs/data</li>
+        <li>RAG pipelines, vector search, analytics</li>
+      </ul>
+    </article>
 
-    <h3 class="section-title" data-reveal>Tech</h3>
-    <div class="marquee small">
-      <div class="marquee-inner"><span>TypeScript</span><span>Next.js</span><span>Node</span><span>Python</span><span>Postgres</span><span>Supabase</span><span>Vercel</span><span>AWS</span></div>
-      <div class="marquee-inner clone"><span>TypeScript</span><span>Next.js</span><span>Node</span><span>Python</span><span>Postgres</span><span>Supabase</span><span>Vercel</span><span>AWS</span></div>
+    <article id="webapps" class="service-block reveal">
+      <h2>Websites & Apps</h2>
+      <p>Animated 3D websites and fast web apps that look premium and convert.</p>
+      <ul class="bullet">
+        <li>Modern frontends (vanilla, React, Next.js)</li>
+        <li>Performance, SEO, accessibility pass</li>
+        <li>Design systems & micro-interactions</li>
+        <li>Hosting (GitHub Pages, Netlify, Vercel)</li>
+      </ul>
+    </article>
+
+    <article id="games" class="service-block reveal">
+      <h2>Games (Prototypes)</h2>
+      <p>Playable prototypes for validation, trailers, and investor demos.</p>
+      <ul class="bullet">
+        <li>Unity or lightweight web builds</li>
+        <li>Physics, input, basic levels & UI</li>
+        <li>Performance & mobile tuning</li>
+        <li>Release plan & analytics</li>
+      </ul>
+    </article>
+
+    <article id="crypto" class="service-block reveal">
+      <h2>Crypto Tokens (Compliance-aware)</h2>
+      <p>
+        Token design & implementation (e.g., ERC-20 / Solana SPL), mint/burn rules, vesting, basic audits, docs, and simple dApps or dashboards.
+        <strong>Note:</strong> Token work depends on your jurisdiction; clients must handle legal/compliance. We provide technical build & best practices only.
+      </p>
+      <ul class="bullet">
+        <li>Contracts, tests, and deployment scripts</li>
+        <li>Explorer verification & documentation</li>
+        <li>Wallet flows & simple dashboards</li>
+        <li>Security checks and rollbacks</li>
+      </ul>
+    </article>
+
+    <article id="cloud" class="service-block reveal">
+      <h2>Cloud-Native Apps</h2>
+      <p>AWS/GCP, serverless backends, managed DBs, caching, and auth.</p>
+      <ul class="bullet">
+        <li>API Gateway + Lambda / Cloud Run</li>
+        <li>DynamoDB, Postgres, Firestore</li>
+        <li>CDN (CloudFront/Firebase Hosting)</li>
+        <li>Auth (Cognito, Auth0, Firebase)</li>
+      </ul>
+    </article>
+
+    <article id="devops" class="service-block reveal">
+      <h2>DevOps & Security</h2>
+      <p>Automated CI/CD, monitoring, backups, zero-trust, and cost control.</p>
+      <ul class="bullet">
+        <li>GitHub Actions, Terraform (IaC)</li>
+        <li>Logging & monitoring (CloudWatch, Grafana)</li>
+        <li>WAF, least-privilege IAM</li>
+        <li>Backups, incident runbooks</li>
+      </ul>
+    </article>
+
+    <div class="center">
+      <a class="btn primary" href="contact.html">Start a Project</a>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">© CloudSpark Technologies • Founder: <strong>K Sri Anjaneyam</strong></div>
+    <div>© <span id="year"></span> CloudSpark Technologies</div>
+    <div class="footer-links">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

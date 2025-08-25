@@ -1,143 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>CloudSpark Technologies — AI, Cloud & Automation</title>
-  <meta name="description" content="CloudSpark Technologies builds AI agents, cloud platforms, automations, and modern apps. Founded by K Sri Anjaneyam.">
-  <link rel="icon" href="assets/logo.png"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CloudSpark Technologies — AI, Cloud, Apps & DevOps</title>
+  <meta name="description" content="CloudSpark Technologies builds AI assistants, cloud-native apps, high-quality websites & apps, game prototypes, and crypto tokens with security-first DevOps." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Page transition -->
-  <div class="page-transition" id="pageTransition"></div>
-
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="CloudSpark logo" class="brand__logo">
-        <span class="brand__name">CloudSpark Technologies</span>
-      </a>
-      <nav class="nav__links">
-        <a href="#services">Services</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Solutions</a>
-        <a href="contact.html" class="btn btn--outline">Contact</a>
-      </nav>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CloudSpark Home">
+      <img src="assets/logo.png" alt="CloudSpark Technologies logo" class="brand-logo" />
+      <span class="brand-name">CloudSpark Technologies</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <nav class="site-nav" role="navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <!-- HERO (no pin, no big gaps) -->
-  <section class="hero" id="home">
+  <!-- HERO: 3D canvas (morphing orb + aurora + particles) -->
+  <section class="hero">
     <canvas id="bg3d" aria-hidden="true"></canvas>
-    <div class="hero__overlay container">
-      <div class="badge">
-        <span>AI • Cloud • Automation</span>
+    <div class="hero-inner">
+      <h1 class="headline">
+        Practical <span class="accent">AI</span>, <span class="accent">Cloud</span> & <span class="accent">DevOps</span><br>for real-world impact
+      </h1>
+      <p class="subhead">
+        We craft AI tutors, modern websites & apps, game prototypes, and even compliant token projects—backed by secure cloud and DevOps.
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href="services.html">Explore Services</a>
+        <a class="btn ghost" href="contact.html">Talk to Us</a>
       </div>
-      <h1 class="hero__title"><span class="accent">CloudSpark</span> builds intelligent systems.</h1>
-      <p class="hero__subtitle">Production AI agents, scalable cloud, resilient automations & sleek apps.</p>
-      <div class="hero__cta">
-        <a href="#services" class="btn btn--primary">Explore Services</a>
-        <a href="contact.html" class="btn btn--ghost">Start a Project</a>
+
+      <div class="badges">
+        <div class="badge reveal">⚡ Rapid MVPs</div>
+        <div class="badge reveal">🔐 Security-first</div>
+        <div class="badge reveal">🧠 AI-native</div>
       </div>
     </div>
-    <div class="hero__fade"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="section container">
-    <h2 class="section__title reveal">What we do</h2>
-    <p class="section__subtitle reveal">Fast to MVP, safe to scale.</p>
-    <div class="grid">
-      <div class="card reveal">
-        <h3>AI Agents & Chatbots</h3>
-        <p>Support, sales, internal ops. Tools, memory, guardrails, analytics.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Cloud & DevOps</h3>
-        <p>Infra-as-code, CI/CD, observability, cost control on AWS/GCP/Azure.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Automation</h3>
-        <p>Connect apps, orchestrate workflows, remove busywork.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Apps & Dashboards</h3>
-        <p>Web & mobile with auth, realtime data and crisp UX.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Proof/Why -->
-  <section class="section container split">
-    <div class="split__text reveal">
-      <h2>Why CloudSpark</h2>
-      <ul class="ticks">
-        <li>Founder-led — fast decisions, strong standards.</li>
-        <li>Architecture first — maintainable and observable.</li>
-        <li>Security minded — secrets, least privilege, reviews.</li>
-        <li>Business impact over hype — measurable value.</li>
-      </ul>
-      <div class="cta-row">
-        <a href="services.html" class="btn btn--primary">See solutions</a>
-        <a href="about.html" class="btn btn--ghost">Meet the team</a>
-      </div>
-    </div>
-    <div class="split__card reveal">
-      <div class="glow"></div>
-      <h3>Delivery Model</h3>
-      <p>Scoped sprints, weekly demos, transparent tracking, and post-launch support.</p>
-      <div class="mini-stats">
-        <div><strong>10x</strong><span>Faster MVPs</span></div>
-        <div><strong>99.9%</strong><span>Uptime targets</span></div>
-        <div><strong>60%</strong><span>Ops time saved</span></div>
-      </div>
+  <!-- Highlights -->
+  <section class="section reveal">
+    <h2 class="section-title">What we do</h2>
+    <div class="card-grid">
+      <a class="card tilt" href="services.html#ai">
+        <h3>AI Assistants</h3>
+        <p>Voice/chat tutors, support bots, data copilots. Launch fast—scale safely.</p>
+        <span class="link">Learn more →</span>
+      </a>
+      <a class="card tilt" href="services.html#webapps">
+        <h3>Websites & Apps</h3>
+        <p>Modern, animated, fast sites & apps designed to convert.</p>
+        <span class="link">Learn more →</span>
+      </a>
+      <a class="card tilt" href="services.html#games">
+        <h3>Games (Prototypes)</h3>
+        <p>Fun playable demos for validation & launch strategy.</p>
+        <span class="link">Learn more →</span>
+      </a>
+      <a class="card tilt" href="services.html#crypto">
+        <h3>Crypto Tokens</h3>
+        <p>Token design, smart contracts, basic audits & docs (compliance-aware).</p>
+        <span class="link">Learn more →</span>
+      </a>
     </div>
   </section>
 
   <!-- Founder -->
-  <section class="section container founder">
-    <div class="founder__card reveal">
-      <img src="assets/founder.jpg" alt="Founder — K Sri Anjaneyam" class="founder__img"/>
-      <div class="founder__info">
-        <h3>K Sri Anjaneyam</h3>
-        <p class="muted">Founder & CEO — CloudSpark Technologies</p>
-        <p>Young founder building useful AI and resilient cloud for real businesses.</p>
-        <div class="founder__cta">
-          <a href="mailto:kompellisrianjaneyam@gmail.com" class="btn btn--primary">Email</a>
-          <a href="tel:+916303450609" class="btn btn--ghost">Call: +91 6303450609</a>
-        </div>
-      </div>
+  <section class="section section-split reveal">
+    <div class="split-text">
+      <h2 class="section-title">Built by a bold, young founder</h2>
+      <p>
+        Hi! I’m <strong>K Sri Anjaneyam</strong>, founder of CloudSpark Technologies. I’m focused on practical AI + Cloud that launches quickly and scales reliably.
+      </p>
+      <a class="btn" href="about.html#founder">Meet the Founder</a>
+    </div>
+    <div class="split-media">
+      <img src="assets/founder.jpg" alt="Founder K Sri Anjaneyam" class="founder-img" />
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div>
-        <div class="brand brand--footer">
-          <img src="assets/logo.png" class="brand__logo" alt="">
-          <span class="brand__name">CloudSpark Technologies</span>
-        </div>
-        <p class="muted">© <span id="year"></span> CloudSpark Technologies. All rights reserved.</p>
-      </div>
-      <nav class="footer__links">
-        <a href="#home">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Solutions</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+  <!-- CTA -->
+  <section class="section cta reveal">
+    <h2 class="section-title">Ready to launch?</h2>
+    <p>We’ll help you validate fast, then scale with confidence.</p>
+    <a class="btn primary" href="contact.html">Start a Project</a>
+  </section>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> CloudSpark Technologies</div>
+    <div class="footer-links">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
   </footer>
 
-  <!-- Libraries -->
-  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
-  <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
-
-  <!-- Your JS -->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

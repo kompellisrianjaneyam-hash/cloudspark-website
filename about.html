@@ -1,68 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>About — CloudSpark</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — CloudSpark Technologies</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="theme-dark">
-  <div id="transition"></div><div id="progress"></div>
-
+<body>
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" data-link><img src="assets/logo.png" class="site-logo"><div class="brand-text"><h1>CloudSpark</h1><p>Cloud • AI • Apps</p></div></a>
-      <button id="navToggle" class="nav-toggle" aria-label="Open Menu">☰</button>
-      <nav id="mainNav" class="main-nav underline-nav">
-        <a href="index.html" data-link>Home</a>
-        <a class="active" href="about.html" data-link>About</a>
-        <a href="services.html" data-link>Services</a>
-        <a href="contact.html" data-link>Contact</a>
-        <span class="u-bar"></span>
-      </nav>
-    </div>
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" class="brand-logo" alt="CloudSpark logo" />
+      <span class="brand-name">CloudSpark Technologies</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main class="container section">
-    <div class="about-hero" data-reveal>
-      <div class="founder-photo tilt"><img src="assets/founder.jpg" alt="Founder — K Sri Anjaneyam"></div>
-      <div class="about-copy">
-        <h2>Hi, I'm <span class="highlight">K Sri Anjaneyam</span> — Founder of CloudSpark.</h2>
-        <p class="muted">I focus on shipping real products quickly: AI agents, dashboards, and user-friendly apps. CloudSpark is small on purpose, so communication stays fast and decisions simple.</p>
-        <ul class="ticks">
-          <li>Prototype → MVP in weeks</li>
-          <li>Transparent scope & pricing</li>
-          <li>Quality over buzzwords</li>
-        </ul>
-      </div>
-    </div>
+  <section class="page-hero">
+    <h1>About</h1>
+    <p>On a mission to make AI & Cloud accessible to ambitious teams.</p>
+  </section>
 
-    <div class="panel grid-2 gap" data-reveal>
-      <div>
-        <h3>Values</h3>
-        <p>Clarity, fast iteration, and measurable outcomes.</p>
-      </div>
-      <div>
-        <h3>Focus</h3>
-        <p>AI support agents, data surfaces, mobile companions, and automation glue.</p>
-      </div>
-    </div>
+  <main class="section">
+    <section class="about-block reveal">
+      <h2>Our mission</h2>
+      <p>
+        CloudSpark helps founders move faster — from idea to launch — using AI-native apps,
+        cloud platforms, and secure DevOps. We keep things simple, fast, and affordable.
+      </p>
+    </section>
 
-    <div class="timeline" data-reveal>
-      <div class="t-item"><span>01</span><h5>Listen</h5><p>Understand constraints & goals.</p></div>
-      <div class="t-item"><span>02</span><h5>Design</h5><p>Flows & components, no fluff.</p></div>
-      <div class="t-item"><span>03</span><h5>Build</h5><p>APIs, UI, data, AI.</p></div>
-      <div class="t-item"><span>04</span><h5>Iterate</h5><p>Ship, learn, refine.</p></div>
-    </div>
+    <section id="founder" class="section-split reveal">
+      <div class="split-text">
+        <h2>Founder: K Sri Anjaneyam</h2>
+        <p>
+          A young founder obsessed with building useful products. I combine practical AI
+          with solid engineering to deliver results quickly. Whether you need a voice tutor,
+          a support bot, or a full cloud app, I’m here to help you ship.
+        </p>
+        <a class="btn" href="contact.html">Work with us</a>
+      </div>
+      <div class="split-media">
+        <img src="assets/founder.jpg" alt="Founder K Sri Anjaneyam" class="founder-img" />
+      </div>
+    </section>
+
+    <section class="timeline reveal">
+      <h2>How we work</h2>
+      <div class="timeline-list">
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <h3>1. Discover</h3>
+          <p>Clarify your goal, users, and constraints.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <h3>2. Prototype</h3>
+          <p>Rapid MVP with clear success metrics.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <h3>3. Launch</h3>
+          <p>Production deploy with monitoring & backups.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span>
+          <h3>4. Improve</h3>
+          <p>Iterate with real user feedback, measure ROI.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">© CloudSpark Technologies • Founder: <strong>K Sri Anjaneyam</strong></div>
+    <div>© <span id="year"></span> CloudSpark Technologies</div>
+    <div class="footer-links">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
